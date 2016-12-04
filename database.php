@@ -1,15 +1,15 @@
 <?php
 
-require_once(db.php);
+require_once('db.php');
 
-class Data_base{
-    $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
-    $option = [
+class Database{
+    private $dsn = 'mysql:host=$host;dbname=$db;charset=$charset';
+    private $option = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
     ];
-    $db;
-    $result;
+    private $db;
+    public $result;
     public function __construct(){
         try{
             $this->db = new PDO($this->dsn, $user, $pass, $this->option);
