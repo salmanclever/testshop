@@ -1,0 +1,128 @@
+.cards {
+  list-style: none;
+  padding: 0;
+  background: #eee;
+  margin: 15px auto;
+  padding: 7.5px;
+}
+.cards__item {
+  background: #ccc;
+  padding: 15px;
+  margin: 7.5px;
+  text-align: center;
+}
+.cards__item img {
+  width: 100%;
+  height: auto;
+}
+.cards__elem {
+  margin: 0 0 15px;
+}
+.cards__elem_img {
+  margin-top: 0;
+}
+.cards__elem_name {
+  flex: 1;
+}
+.cards__elem_post {
+  margin-top: auto;
+}
+.cards__elem_button {
+  margin-top: auto;
+}
+
+.cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.cards__item {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  flex: 0 calc(100%/4 - 15px);
+}
+@media (max-width: 991px) {
+  .cards__item {
+    flex: 0 calc(100%/3 - 15px);
+  }
+}
+@media (max-width: 767px) {
+  .cards__item {
+    flex: 0 calc(100%/2 - 15px);
+  }
+}
+@media (max-width: 479px) {
+  .cards__item {
+    flex: 0 100%;
+  }
+}
+00);
+
+0);
+
+h1, input{
+  color: #444;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+h1{
+  border-bottom: 1px solid #8FC4FF;
+  padding-bottom: 10px;
+}
+form{
+	padding: 0;
+  margin: 0;
+}
+/* Expandable search box */
+/* Note: don't change 0.8s in transition. */
+/* --------------------- */
+input.search-text {
+	color: #222;
+	position:relative;
+	z-index:5;
+	-webkit-transition: z-index 0.8s, width 0.5s, background 0.3s ease, border 0.3s;
+	transition: z-index 0.8s, width 0.5s, background 0.3s ease, border 0.3s;
+	height: 45px;
+	width: 0;
+	margin: 0;
+	padding: 5px 0 5px 40px;
+	box-sizing: border-box;
+	font-size: 16px;
+	font-size: 1rem;
+	cursor: pointer;
+	border-radius: 30px;
+	border: 2px solid transparent;
+	/*background: url(search.png) no-repeat left 9px center transparent;*/
+	background: url(https://dl.dropboxusercontent.com/u/6624374/opensource-projects/codepen/search.svg) no-repeat left 9px center transparent;
+  background-size:24px;
+}
+input.search-text:focus {
+	z-index:3; 
+	width: 270px;
+	border: 1px solid #376200;  
+	background-color: #E4FFCE;
+	outline: none;
+	cursor:auto;
+	padding-right: 10px;
+}
+
+input.search-submit {
+	position: relative;
+	z-index: 4;
+	top:17px;
+	left: 49px;
+	width: 45px;
+	height: 45px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	border-radius: 30px;
+	cursor: pointer; 
+	background: none;
+}
+
+input.search-text::-webkit-search-cancel-button {
+	cursor:pointer;
+}
